@@ -5,12 +5,12 @@
 
 ## 2. What are JavaScript Data Types?
 >**number** for numbers of any kind: integer or floating-point.
-**string** for strings. A string may have one or more characters, there’s no separate single-character type.
-**boolean** for true/false.
-**null** for unknown values – a standalone type that has a single value null.
-**undefined** for unassigned values – a standalone type that has a single value undefined.
-**object** for more complex data structures.
-**symbol** for unique identifiers.
+>**string** for strings. A string may have one or more characters, there’s no separate single-character type.
+>**boolean** for true/false.
+>**null** for unknown values – a standalone type that has a single value null.
+>**undefined** for unassigned values – a standalone type that has a single value undefined.
+>**object** for more complex data structures.
+>**symbol** for unique identifiers.
 
 ## 3. What is hoisting?
 > https://www.youtube.com/watch?v=mhZWi9tSy44
@@ -73,11 +73,13 @@ var unhoistedFunctionExpression = function () {
 ```javascript
 // Here we have an outer, or enclosing, function named "outerFunction"
 function outerFunction(name) {
-  // and that outer function has a variable in it's local scope, and the variable is called "greeting"
+  // and that outer function has a variable in it's local scope, and the variable is called
+  // "greeting"
   var greeting = 'Hello';
 
   // Also our inner function (called innerFunction) has access to the "greeting" variable,
-  // so the inner function will console log the "greeting" variable and the name passed to the "outerFunction"
+  // so the inner function will console log the "greeting" variable and the name passed to
+  // the "outerFunction"
   function innerFunction() {
     console.log(greeting + ' ' + name);
   }
@@ -163,7 +165,8 @@ var subtractOneFunctionally = function (obj) {
 
 Example 1:
 ```javascript
-// In this example, the three lines of code run in order - the next line cannot run unless the one before it completes.
+// In this example, the three lines of code run in order - the next line cannot run unless the
+// one before it completes.
 console.log('One');
 console.log('Two');
 console.log('Three');
@@ -171,9 +174,9 @@ console.log('Three');
 
 Example 2:
 ```javascript
-// In this example we see that "Tree" is logged before "Two", even though "Two" shows up earlier in the code
-// This is because setTimeout is asynchronous operation (it waits for the amount of time that we specified
-// before running the function inside of it).
+// In this example we see that "Tree" is logged before "Two", even though "Two" shows up earlier
+// in the code. This is because setTimeout is asynchronous operation (it waits for the amount of
+// time that we specified before running the function inside of it).
 // The inner function is called the Callback, because it is called later when things are ready.
 console.log('One');
 setTimeout(function () {
