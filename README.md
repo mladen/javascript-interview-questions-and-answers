@@ -188,9 +188,37 @@ console.log('Three');
 ## How can you determine if something is an array?
 > https://youtu.be/mhZWi9tSy44?t=295
 
+If we do
 ```javascript
-
+typeof []; // 'object'
 ```
+we get an object, so that doesn't work
+
+Instead we can use the constructor property to solve this problem, so if we do
+```javascript
+[].constructor; // Array
+```
+we get the global Array constructor, so we can do
+
+```javascript
+[].constructor === Array // true
+```
+
+## What is a higher order function?
+> https://youtu.be/mhZWi9tSy44?t=320
+
+> A higher order function is a function that can take another function as an argument or that returns a function as a result
+> Notice: A closure is a kind of a higher order function
+
+Example (this example basically implements the native forEach method for arrays)
+```javascript
+var forEach = function(array, iterator) {
+  for(var i = 0;)
+}
+```
+
+
+
 
 :sparkles:
 :+1:
