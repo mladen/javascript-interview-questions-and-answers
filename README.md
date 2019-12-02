@@ -213,8 +213,14 @@ we get the global Array constructor, so we can do
 Example (this example basically implements the native forEach method for arrays)
 ```javascript
 var forEach = function(array, iterator) {
-  for(var i = 0;)
+  for(var i = 0; i < array.length; i++) {
+    iterator(array[i], i);
+  }
 }
+
+forEach(['Michael', 'Tim'], function(arrayItem, index) {
+  console.log(arrayItem, index);
+});
 ```
 
 
