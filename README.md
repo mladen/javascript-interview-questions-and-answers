@@ -222,8 +222,34 @@ forEach(['Michael', 'Tim'], function(arrayItem, index) {
   console.log(arrayItem, index);
 });
 ```
+## What is the difference between an array and an array-like object?
+> https://youtu.be/mhZWi9tSy44?t=374
 
+> An array-like object does not have a standard array methods, but an array can be created from it with array.from
 
+Example 1
+```javascript
+function arrayLikeExample(firstArgument, secondArgument) {
+  arguments.forEach(function(argument) { // arguments variable is an array-like object(!)
+    console.log(argument);               // and when we're using a forEach method, which is available (used) for arrays
+  }); // Error                           // we get an Error
+}
+
+arrayLikeExample('first', 'second');
+```
+
+Example 2
+```javascript
+function arrayExample(firstArgument, secondArgument) {
+  var arrayFromArguments = Array.from(arguments); // Here we create an actual array from an array-like variable
+
+  arrayFromArguments.forEach(function(argument) {
+    console.log(argument);
+  }); // first, second
+}
+
+arrayExample('first', 'second');
+```
 
 
 :sparkles:
