@@ -251,6 +251,20 @@ function arrayExample(firstArgument, secondArgument) {
 arrayExample('first', 'second');
 ```
 
+## What is type coercion?
+> https://youtu.be/mhZWi9tSy44?t=402
+
+JavaScript sometimes allows something of a particular type to be coerced into another type.
+Here are some examples:
+
+```javascript
+console.log('Hello ' + 8); // Here 8 is a number, but it is coerced into a string, so
+                           // there is no type error that results
+
+console.log('8' == 8); // Here, the first 8 is a string, and the second 8 is a number
+                       // but they are counted as equal to one another because of
+                       // the coercion
+```
 
 :sparkles:
 :+1:
