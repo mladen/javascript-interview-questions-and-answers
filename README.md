@@ -1,9 +1,9 @@
 # JavaScript Interview Questions and Answers
 
-## 1. Explain event bubling
+## Explain event bubling
 >https://www.sitepoint.com/event-bubbling-javascript/
 
-## 2. What are JavaScript Data Types?
+## What are JavaScript Data Types?
 >**number** for numbers of any kind: integer or floating-point.
 >**string** for strings. A string may have one or more characters, there’s no separate single-character type.
 >**boolean** for true/false.
@@ -34,7 +34,8 @@ console.log(variableInLocalScope);  // Does not work
 ## What is hoisting?
 > https://youtu.be/mhZWi9tSy44?t=64
 
-> Hoisting is JavaScript's default behavior of moving variable and function declarations to the top
+> Hoisting is JavaScript's default behavior of moving variable and function <strong>declarations</strong> to the top
+(<span style="color: red">JavaScript hoists [declarations](https://www.w3schools.com/js/js_hoisting.asp), not initializations - [link](https://stackoverflow.com/a/39182157 "StackOverflow comment")</span>)
 
 #### Examples with variable hoisting
 
