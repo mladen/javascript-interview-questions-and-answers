@@ -12,8 +12,27 @@
 >**object** for more complex data structures.
 >**symbol** for unique identifiers.
 
-## 3. What is hoisting?
-> https://www.youtube.com/watch?v=mhZWi9tSy44
+## What is scope?
+> https://youtu.be/mhZWi9tSy44?t=25
+
+A variable that is accessible everywhere has global scope, and a variable that can only be accessed in a particular place has local scope.
+
+```javascript
+var variableInGlobalScope = 'I am global';
+
+function functionWithLocalScope() {
+  var variableInLocalScope = 'I am local';
+
+  console.log(variableInGlobalScope);  // Works
+  console.log(variableInLocalScope);  // Works
+}
+
+console.log(variableInGlobalScope);  // Works
+console.log(variableInLocalScope);  // Does not work
+```
+
+## What is hoisting?
+> https://youtu.be/mhZWi9tSy44?t=64
 
 > Hoisting is JavaScript's default behavior of moving variable and function declarations to the top
 
@@ -66,7 +85,7 @@ var unhoistedFunctionExpression = function () {
 }
 ```
 ## 4. What is a closure?
-> https://www.youtube.com/watch?v=mhZWi9tSy44
+> https://youtu.be/mhZWi9tSy44?t=120
 
 >A closure is an inner function that has access to the outer, or enclosing, function's variables.
 
