@@ -266,6 +266,14 @@ console.log('8' == 8); // Here, the first 8 is a string, and the second 8 is a n
                        // the coercion
 ```
 
+## What is the difference between two-way data binding and one-way data flow?
+> https://youtu.be/mhZWi9tSy44?t=437
+
+Two way data binding means that fields, such as inputs in the UI are bound to the model data, such that when either the UI or the model data changes the other one is also updated with it.
+Two way data binding can cause side effects, that are difficult to debug. <span style="color:red; font-weight:bold">What side effects??!</span>
+
+One way data flow means that there is a single source of truth (<span style="color:red; font-weight:bold">What is the single source of truth? Definition/explanation!</span>) and changes in that single source of truth can only flow in one direction.
+With one way data flow it is easier to understand what is happening with the data, and therefore easier to debug. React/Redux is a good example of a pattern that uses one-way data flow.
 :sparkles:
 :+1:
   :evergreen_tree:
