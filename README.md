@@ -4,13 +4,13 @@
 >https://www.sitepoint.com/event-bubbling-javascript/
 
 ## What are JavaScript Data Types?
->**number** for numbers of any kind: integer or floating-point.
->**string** for strings. A string may have one or more characters, there’s no separate single-character type.
->**boolean** for true/false.
->**null** for unknown values – a standalone type that has a single value null.
->**undefined** for unassigned values – a standalone type that has a single value undefined.
->**object** for more complex data structures.
->**symbol** for unique identifiers.
+>1. **number** for numbers of any kind: integer or floating-point.
+>2. **string** for strings. A string may have one or more characters, there’s no separate single-character type.
+>3. **boolean** for true/false.
+>4. **null** for unknown values – a standalone type that has a single value null. (<span style="color: red; font-weight: bold">Null is also considered an [object](https://www.toptal.com/javascript/interview-questions)!</span>)
+>5. **undefined** for unassigned values – a standalone type that has a single value undefined.
+>6. **object** for more complex data structures.
+>7. **symbol** for unique identifiers. <span style="color: red; font-weight: bold">ES6?</span>
 
 ## What is scope?
 > https://youtu.be/mhZWi9tSy44?t=25
@@ -35,7 +35,7 @@ console.log(variableInLocalScope);  // Does not work
 > https://youtu.be/mhZWi9tSy44?t=64
 
 > Hoisting is JavaScript's default behavior of moving variable and function <strong>declarations</strong> to the top
-(<span style="color: red">JavaScript hoists [declarations](https://www.w3schools.com/js/js_hoisting.asp), not initializations - [link](https://stackoverflow.com/a/39182157 "StackOverflow comment")</span>)
+(<span style="color: red; font-weight: bold">JavaScript hoists [declarations](https://www.w3schools.com/js/js_hoisting.asp), not initializations - [link](https://stackoverflow.com/a/39182157 "StackOverflow comment")</span>)
 
 #### Examples with variable hoisting
 
