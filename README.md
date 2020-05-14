@@ -42,14 +42,16 @@ console.log(variableInLocalScope);  // Does not work
 
 Example 1:
 ```{ .javascript .numberLines }
-// Because the variable "x" has not yet been defined, it produces an error
+// Because the variable "x" has not yet been defined, it
+// produces an error
 console.log(x); // Error
 ```
 
 Example 2:
 ```{ .javascript .numberLines }
 // Even though we're console-logging the variable "x" before
-// it is defined the var x declaration below gets hoisted to the top
+// it is defined the var x declaration below gets hoisted to
+// the top
 console.log(x); // undefined
 var x;
 
@@ -58,8 +60,8 @@ var x;
 var x;
 console.log(x); // undefined
 
-// and that's why in this (second) example an "x" is undefined and
-// does not produce an error
+// and that's why in this (second) example an "x" is undefined
+// and does not produce an error
 ```
 
 #### Examples with function hoisting
@@ -92,20 +94,23 @@ var unhoistedFunctionExpression = function () {
 >A closure is an inner function that has access to the outer, or enclosing, function's variables.
 
 ```{ .javascript .numberLines }
-// Here we have an outer, or enclosing, function named "outerFunction"
+// Here we have an outer, or enclosing, function named
+// "outerFunction"
 function outerFunction(name) {
-  // and that outer function has a variable in it's local scope, and the variable is called
-  // "greeting"
+  // and that outer function has a variable in it's local
+  // scope, and the variable is called "greeting"
   var greeting = 'Hello';
 
-  // Also our inner function (called innerFunction) has access to the "greeting" variable,
-  // so the inner function will console log the "greeting" variable and the name passed to
-  // the "outerFunction"
+  // Also our inner function (called innerFunction) has
+  // access to the "greeting" variable, so the inner
+  // function will console log the "greeting" variable and
+  //the name passed to the "outerFunction"
   function innerFunction() {
     console.log(greeting + ' ' + name);
   }
 
-  return innerFunction; // The outer/enclosing returns the inner function
+  // The outer/enclosing returns the inner function
+  return innerFunction;
 }
 
 var sayHelloToJohn = outerFunction('John');
@@ -126,11 +131,11 @@ It is declarative<sup>(meaning?)</sup>, rather than imperative<sup>(meaning?)</s
 
 Example 1:
 ```{ .javascript .numberLines }
-// In this example, an object has state that is shared by two functions below,
-// and the two functions below mutate the object itself which means that they
-// also produce side effect.
-// And since the functions use state that's outside of themselves what they
-// return is pretty unpredictable
+// In this example, an object has state that is shared by two
+// functions below, and the two functions below mutate the object
+// itself which means that they also produce side effect.
+// And since the functions use state that's outside of themselves
+// what they return is pretty unpredictable
 var obj = {
   x: 4;
 }
@@ -147,11 +152,11 @@ var subtractOneByMutatingSharedStateAndProducingASideEffect = function() {
 Example 2:
 ```{ .javascript .numberLines }
 // In this example the object is not shared or mutated at all.
-// The two functions below don't mutate the object but rather take the object
-// as an argument, and then they make the copy of the object and then perform
-// the operation on the copy of the object,
-// So, unlike the first example we always know what the functions will return
-// based on what we pass in.
+// The two functions below don't mutate the object but rather take
+// the object as an argument, and then they make the copy of the
+// object and then perform the operation on the copy of the object,
+// So, unlike the first example we always know what the functions
+// will return based on what we pass in.
 var obj = {
   x: 4
 };
@@ -186,7 +191,8 @@ var subtractOneFunctionally = function (obj) {
 
 Example 1:
 ```{ .javascript .numberLines }
-// In this example, the three lines of code run in order - the next line cannot run unless the
+// In this example, the three lines of code run in
+// order - the next line cannot run unless the
 // one before it completes.
 console.log('One');
 console.log('Two');
@@ -195,10 +201,13 @@ console.log('Three');
 
 Example 2:
 ```{ .javascript .numberLines }
-// In this example we see that "Tree" is logged before "Two", even though "Two" shows up earlier
-// in the code. This is because setTimeout is asynchronous operation (it waits for the amount of
-// time that we specified before running the function inside of it).
-// The inner function is called the Callback, because it is called later when things are ready.
+// In this example we see that "Tree" is logged before "Two",
+// even though "Two" shows up earlier in the code.
+// This is because setTimeout is asynchronous operation
+// (it waits for the amount of time that we specified before
+// running the function inside of it).
+// The inner function is called the Callback, because it
+// is called later when things are ready.
 console.log('One');
 setTimeout(function () {
   console.log('Two');
